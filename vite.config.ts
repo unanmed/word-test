@@ -8,7 +8,9 @@ export default defineConfig({
     plugins: [
         vue(),
         legacy({
-            targets: ['> 95%', 'not IE 11']
+            targets: ['> 95%', 'not IE 11'],
+            modernPolyfills: true,
+            polyfills: true
         })
     ]
 });
