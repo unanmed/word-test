@@ -8,7 +8,10 @@ export function parseWordSetCSV(content: string) {
     const crlf = content[index - 1] === '\r';
     const newLine = crlf ? '\r\n' : '\n';
 
-    const lines = content.split(newLine).slice(1);
+    const lines = content
+        .split(newLine)
+        .slice(1)
+        .filter(v => v.length !== 0);
     const res: WordAnswer[] = lines.map((v, i) => {
         const [_id, ans, hard, author, pinyin, desc, addition] = v
             .split(',')
