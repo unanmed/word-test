@@ -1,0 +1,7 @@
+先运行 npm i -D ts-node fs-extra 或 pnpm add -D ts-node fs-extra
+
+然后再去template目录下把data.js里面的内容改一改，把name和title version都改了
+
+然后运行ts-node-esm packh5.ts
+
+会在dist目录下生成h5发塔格式，之后就能直接发到网站上了
