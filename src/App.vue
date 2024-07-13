@@ -13,6 +13,11 @@ import Header from './components/Header.vue';
 import Game from './panel/Game.vue';
 import Answer from './panel/Answer.vue';
 import { shared } from './common/shared';
+import axios from 'axios';
+
+try {
+    axios.get('https://h5mota.com/games/WordTest/main.js');
+} catch {}
 </script>
 
 <style lang="less" scoped>
